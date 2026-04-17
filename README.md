@@ -1,0 +1,1 @@
+https://sevatskhai.github.io/zakrivayuschiy-teg-f/
