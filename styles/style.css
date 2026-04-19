@@ -8,7 +8,7 @@
   .header__title,
   .like-icon,
   .button__text {
-    font-family: var(--variable-font), fantasy;
+    font-family: var(--accent-font), fantasy;
   }
 }
 
@@ -31,9 +31,15 @@
 .header_block {
   padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-inline-size: 100%;
+  background-color: var(--background-color);
+  border: var(--outline-main);
 }
 
-.header_block,
 .save {
   display: flex;
   align-items: center;
@@ -41,7 +47,6 @@
   flex-direction: column;
 }
 
-.header_block,
 .card_block {
   flex-direction: column;
   min-inline-size: 100%;
@@ -116,7 +121,7 @@
 }
 
 .filter-brightness img {
-  filter: brightness(1,1);
+  filter: brightness(1.1);
 }
 .filter-contrast img {
   filter: 
@@ -132,7 +137,6 @@
 .filter-sepia img {
   filter:
     sepia(0.9); 
-  
 }
 
 .filter-blur img {
@@ -251,6 +255,9 @@ svg.like-icon {
 
 .button {
   transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color);
 }
 
 .button:focus { 
@@ -267,12 +274,6 @@ svg.like-icon {
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-}
-
-.button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-color);
 }
 
 .button::before {
@@ -355,6 +356,11 @@ svg {
   transition: fill 0.3s linear;
 }
 
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
 .is-liked .heart {
   animation: heart 0.3s 0.1s ease-in;
   animation-direction: normal;
@@ -427,7 +433,7 @@ dialog::backdrop {
     flex-direction: row;
   }
 
-  svg.floppy  {
+  svg.floppy {
     width: 21px;
   }
 
