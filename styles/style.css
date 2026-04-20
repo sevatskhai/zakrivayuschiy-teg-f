@@ -56,29 +56,30 @@
   border: var(--outline-main);
 }
 
-.header__logo,
-.header__title,
-.text-dialog {
-  text-transform: uppercase;
-  align-self: center;
-}
-
 .button__text {
   font-size:  0.875rem;
   align-items: center;
   line-height: var(--line-height-text-botton);
   color: var(--accent-color-text);
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--accent-color-text);
+  z-index: 2;
 }
 
 .header__logo {
   font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
   font-variation-settings: 'wght' var(--fweight-main, 400);
   line-height: 1;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .header__title {
   margin-top: 20px;
   font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .card_section {
@@ -182,10 +183,6 @@
   }
 }
 
-.filter-blur label {
-  text-wrap: nowrap;
-}
-
 .card_text {
   padding: var(--padding-text); 
   line-height: var(--line-height-text);
@@ -198,7 +195,6 @@
 
 .section_button {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   column-gap: 8px;
   margin-block-end: 25px;
@@ -210,7 +206,6 @@
 .card__icon-button {
   display: flex;
   padding: 0;
-  flex-wrap: wrap;
   width: 39px;
   height: 38px;
   align-items: center;
@@ -234,7 +229,6 @@ svg.like-icon {
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
-  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,11 +292,6 @@ svg {
 
 .floppy {
   width: 28px;
-}
-
-.button__text,
-.floppy,
-.floppy-dialog {
   position: relative;
   mix-blend-mode: difference;
   color: var(--accent-color-text);
@@ -311,6 +300,10 @@ svg {
 
 .floppy-dialog {
   width: 39px;
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--accent-color-text);
+  z-index: 2;
 }
 
 .like-icon:hover .main-body {
@@ -415,6 +408,8 @@ dialog::backdrop {
 .text-dialog {
   text-wrap: wrap;
   line-height: var(--line-height-dialog);
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .dialog-button {
